@@ -96,7 +96,6 @@ class ListViewController: UITableViewController {
                 configureCheckmark(for: cell, with: item)
                 tableView.deselectRow(at: indexPath, animated: true)
             }
-            
         }
     }
     
