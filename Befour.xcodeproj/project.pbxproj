@@ -10,7 +10,6 @@
 		779749F921E2FEEE008CE19B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779749F821E2FEEE008CE19B /* AppDelegate.swift */; };
 		779749FB21E2FEEE008CE19B /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779749FA21E2FEEE008CE19B /* ListViewController.swift */; };
 		779749FE21E2FEEE008CE19B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 779749FC21E2FEEE008CE19B /* Main.storyboard */; };
-		77974A0121E2FEEE008CE19B /* Befour.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 779749FF21E2FEEE008CE19B /* Befour.xcdatamodeld */; };
 		77974A0321E2FEF0008CE19B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77974A0221E2FEF0008CE19B /* Assets.xcassets */; };
 		77974A0621E2FEF0008CE19B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77974A0421E2FEF0008CE19B /* LaunchScreen.storyboard */; };
 		77974A1121E2FEF0008CE19B /* BefourTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77974A1021E2FEF0008CE19B /* BefourTests.swift */; };
@@ -35,7 +34,6 @@
 		779749F821E2FEEE008CE19B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		779749FA21E2FEEE008CE19B /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		779749FD21E2FEEE008CE19B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		77974A0021E2FEEE008CE19B /* Befour.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Befour.xcdatamodel; sourceTree = "<group>"; };
 		77974A0221E2FEF0008CE19B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77974A0521E2FEF0008CE19B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77974A0721E2FEF0008CE19B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 				77974A0421E2FEF0008CE19B /* LaunchScreen.storyboard */,
 				77974A0221E2FEF0008CE19B /* Assets.xcassets */,
 				77974A0721E2FEF0008CE19B /* Info.plist */,
-				779749FF21E2FEEE008CE19B /* Befour.xcdatamodeld */,
 			);
 			path = Befour;
 			sourceTree = "<group>";
@@ -249,7 +246,6 @@
 				779749FB21E2FEEE008CE19B /* ListViewController.swift in Sources */,
 				77974A2021E2FF87008CE19B /* ListTableViewCell.swift in Sources */,
 				779749F921E2FEEE008CE19B /* AppDelegate.swift in Sources */,
-				77974A0121E2FEEE008CE19B /* Befour.xcdatamodeld in Sources */,
 				77974A2421E2FFC1008CE19B /* List.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,19 +513,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		779749FF21E2FEEE008CE19B /* Befour.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				77974A0021E2FEEE008CE19B /* Befour.xcdatamodel */,
-			);
-			currentVersion = 77974A0021E2FEEE008CE19B /* Befour.xcdatamodel */;
-			path = Befour.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 779749ED21E2FEEE008CE19B /* Project object */;
 }

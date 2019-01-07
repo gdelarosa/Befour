@@ -79,6 +79,7 @@ extension DetailViewController: UITextFieldDelegate {
             }
             
             let newText = oldText.replacingCharacters(in: stringRange, with: string)
+            
             if newText.isEmpty {
                 addButton.isEnabled = false
             } else {

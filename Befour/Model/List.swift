@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 class List {
     
@@ -20,39 +21,21 @@ class List {
     private var nightList: [Item] = []
     
     init() {
-        
+
         let row0Item = Item()
         let row1Item = Item()
         let row2Item = Item()
         let row3Item = Item()
-        let row4Item = Item()
-        let row5Item = Item()
-        let row6Item = Item()
-        let row7Item = Item()
-        let row8Item = Item()
-        let row9Item = Item()
-        
-        row0Item.text = "Take a jog"
-        row1Item.text = "Watch a movie"
-        row2Item.text = "Code an app"
-        row3Item.text = "Walk the dog"
-        row4Item.text = "Study design patterns"
-        row5Item.text = "Go camping"
-        row6Item.text = "Pay bills"
-        row7Item.text = "Plan vacation"
-        row8Item.text = "Walk the cat"
-        row9Item.text = "Play games"
-        
+
+        row0Item.text = "Explore App"
+        row1Item.text = "Create my own to do"
+        row2Item.text = "Complete a to do"
+        row3Item.text = "Feel accomplished!"
+
         addTodo(row0Item, for: .morning)
-        addTodo(row1Item, for: .evening)
-        addTodo(row2Item, for: .morning)
+        addTodo(row1Item, for: .afternoon)
+        addTodo(row2Item, for: .evening)
         addTodo(row3Item, for: .night)
-        addTodo(row4Item, for: .evening)
-        addTodo(row5Item, for: .night)
-        addTodo(row6Item, for: .night)
-        addTodo(row7Item, for: .afternoon)
-        addTodo(row8Item, for: .morning)
-        addTodo(row9Item, for: .night)
         
     }
     
@@ -100,7 +83,7 @@ class List {
     
     func newTodo() -> Item {
         let item = Item()
-        item.text = randomTitle()
+        //item.text = randomTitle()
         item.checked  = true
         morningList.append(item)
         return item
@@ -123,11 +106,5 @@ class List {
         case .night:
             nightList.remove(at: index)
         }
-    }
-    
-    private func randomTitle() -> String {
-        var titles = ["New todo item", "Generic todo", "Fill me out", "I need something to do", "Much todo about nothing"]
-        let randomNumber = Int.random(in: 0 ... titles.count - 1)
-        return titles[randomNumber]
     }
 }

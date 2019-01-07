@@ -8,24 +8,21 @@
 
 import UIKit
 
+
 class ListViewController: UITableViewController {
 
     var todoList: List
     
     private func priorityForSectionIndex(_ index: Int) -> List.timeOfDay? {
         return List.timeOfDay(rawValue: index)
-        
     }
     
     @IBAction func addItem(_ sender: Any) {
-        
-        let newRowIndex = todoList.todoList(for: .afternoon).count
-        _ = todoList.newTodo()
-        
+        let newRowIndex = todoList.todoList(for: .morning).count
+ 
         let indexPath = IndexPath(row: newRowIndex, section: 0)
         let indexPaths = [indexPath]
         tableView.insertRows(at: indexPaths, with: .automatic)
-        
     }
     
     @IBAction func deleteItems(_ sender: Any) {
@@ -71,17 +68,21 @@ class ListViewController: UITableViewController {
         }
         return 0
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
         if let priority = priorityForSectionIndex(indexPath.section) {
             let items = todoList.todoList(for: priority)
             let item = items[indexPath.row]
             configureText(for: cell, with: item)
             configureCheckmark(for: cell, with: item)
         }
+       
         return cell
     }
+    
+   
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView.isEditing {
@@ -120,7 +121,7 @@ class ListViewController: UITableViewController {
         
         tableView.reloadData()
     }
-    
+
     func configureText(for cell: UITableViewCell, with item: Item) {
         if let checkmarkCell = cell as? ListTableViewCell {
             checkmarkCell.todoTextLabel.text = item.text
@@ -165,22 +166,22 @@ class ListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         var title: String? = nil
+
         if let priority = priorityForSectionIndex(section) {
             switch priority {
             case .morning:
-                title = "Morning"
+                title = "Morning 🌅"
             case .afternoon:
-                title = "Afternoon"
+                title = "Afternoon ☀️"
             case .evening:
-                title = "Evening"
+                title = "Evening 🌇"
             case .night:
-                title = "Night"
+                title = "Night 🌙"
             }
         }
         return title
     }
-    
-    
+
 }
 
 extension ListViewController: DetailViewControllerDelegate {

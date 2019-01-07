@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="cell" rowHeight="52" id="Yle-sI-yep" customClass="ListTableViewCell" customModule="Befour" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="cell" rowHeight="52" id="Yle-sI-yep" customClass="ListTableViewCell" customModule="Befour" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="52"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yle-sI-yep" id="MKl-MJ-C0m">
@@ -26,7 +26,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLj-44-SEH">
-                                            <rect key="frame" x="16" y="15" width="26" height="21"/>
+                                            <rect key="frame" x="16" y="15" width="26" height="21.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="26" id="SVC-O3-OcO"/>
                                             </constraints>
@@ -35,9 +35,8 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykt-vt-0et">
-                                            <rect key="frame" x="50" y="14" width="237" height="21"/>
+                                            <rect key="frame" x="50" y="14" width="237" height="21.5"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -55,7 +54,7 @@
                                 <connections>
                                     <outlet property="checkmarkLabel" destination="vLj-44-SEH" id="GvC-uA-ehZ"/>
                                     <outlet property="todoTextLabel" destination="Ykt-vt-0et" id="Rc6-aK-k23"/>
-                                    <segue destination="iGg-oZ-H5p" kind="show" trigger="accessoryAction" id="mZp-TU-Y5V"/>
+                                    <segue destination="iGg-oZ-H5p" kind="show" identifier="EditItemSegue" trigger="accessoryAction" id="mZp-TU-Y5V"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -83,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="1120.8" y="144.3778110944528"/>
         </scene>
-        <!--Title-->
+        <!--What's Next?-->
         <scene sceneID="6GV-Kp-Cad">
             <objects>
                 <tableViewController id="iGg-oZ-H5p" customClass="DetailViewController" customModule="Befour" customModuleProvider="target" sceneMemberID="viewController">
@@ -101,11 +100,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xKu-cJ-iYw">
-                                                    <rect key="frame" x="16" y="6" width="343" height="30"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xKu-cJ-iYw">
+                                                    <rect key="frame" x="16" y="6" width="343" height="30.5"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
                                                         <action selector="done:" destination="iGg-oZ-H5p" eventType="editingDidEndOnExit" id="sGo-0D-FDg"/>
                                                         <outlet property="delegate" destination="Sjj-mB-N6J" id="kKr-CK-Bem"/>
@@ -128,7 +127,7 @@
                             <outlet property="delegate" destination="iGg-oZ-H5p" id="mV7-DS-23I"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="Sjj-mB-N6J">
+                    <navigationItem key="navigationItem" title="What's Next?" id="Sjj-mB-N6J">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="7S3-wO-MSC">
                             <connections>
                                 <action selector="cancelAction:" destination="iGg-oZ-H5p" id="wVs-6E-r99"/>
@@ -170,6 +169,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mZp-TU-Y5V"/>
+        <segue reference="gbe-XQ-hvJ"/>
     </inferredMetricsTieBreakers>
 </document>
